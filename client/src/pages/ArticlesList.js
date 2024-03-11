@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import articleContent from "./article-content";
 
 const ArticlesList = () => {
@@ -13,13 +14,13 @@ const ArticlesList = () => {
             <div key={index} className='p-4 md:w-1/2'>
               <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg
               overflow-hidden'>
-                <link to={`/article/${article.name}`}>
+                <Link to={`/article/${article.name}`}>
                   <img
                     className='lg:h-48 md:h-36 w-full object-cover object-center'
                     src={article.thumbnail}
                     alt='blog'
                   />
-                </link>
+                </Link>
               </div>
             </div>
           ))}
